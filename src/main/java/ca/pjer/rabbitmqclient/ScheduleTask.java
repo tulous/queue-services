@@ -25,7 +25,7 @@ public class ScheduleTask {
     private SimpMessagingTemplate template;
 
     // this will send a message to an endpoint on which a client can subscribe
-    @Scheduled(fixedRate = 1000)
+    @Scheduled(fixedRate = 200)
     public void trigger() {
         Message msg = rabbitTemplate.receive(TEST_QUEUE);
         if(msg != null){
